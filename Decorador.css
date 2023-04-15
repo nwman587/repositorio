@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD62cQbvxnJGi9RCp-JnxJNvEPX5tdl-6Sc0wHfo8I5w&s");
+    background-size: cover;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    animation: slide-down 1s ease-out;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.textareas-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.textarea-container {
+    width: 48%;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+    border: 3px solid #3498db;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.4s;
+}
+
+textarea:focus {
+    border-color: #2ecc71;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+button {
+    position: relative;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 2px;
+    cursor: pointer;
+    transition: background-color 0.4s, color 0.4s, transform 0.4s;
+}
+
+button:hover {
+    background-color: #2ecc71;
+}
+
+button > span {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.4s;
+}
+
+button:hover > span {
+    transform: translateX(8px);
+}
+
+.arrow {
+    border: none;
+    font-size: 16px;
+    transition: transform 0.4s;
+}
+
+.arrow:hover {
+    transform: rotate(180deg);
+}
+
+.footer {
+    background-color: #3498db;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer p {
+    font-size: 18px;
+    color: white;
+    margin: 0;
+}
+
+.footer a {
+    color: #2ecc71;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.4s;
+}
+
+.footer a:hover {
+    color: #27ae60;
+}
+
+.fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.content-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    border: 3px solid;
+    animation: rainbow-border 5s linear infinite;
+}
+
+@keyframes rainbow-border {
+    0% {border-color: rgb(255, 0, 0);}
+    14% {border-color: rgb(255, 255, 0);}
+    28% {border-color: rgb(0, 255, 0);}
+    42% {border-color: rgb(0, 255, 255);}
+    57% {border-color: rgb(0, 0, 255);}
+    71% {border-color: rgb(255, 0, 255);}
+    85% {border-color: rgb(255, 0, 0);}
+    100% {border-color: rgb(255, 0, 0);}
+}
+
